@@ -107,3 +107,6 @@ PWA_APP_SPLASH_SCREEN = getattr(settings, 'PWA_APP_SPLASH_SCREEN', [
 ])
 PWA_APP_DIR = getattr(settings, 'PWA_APP_DIR', 'auto')
 PWA_APP_LANG = getattr(settings, 'PWA_APP_LANG', 'en-US')
+
+## OPTIONAL fields add in manifests.json
+PWA_OPTIONAL = getattr(settings, 'PWA_OPTIONAL', False)
