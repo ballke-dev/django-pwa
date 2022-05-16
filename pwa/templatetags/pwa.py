@@ -12,7 +12,7 @@ register = template.Library()
 @register.filter(is_safe=True)
 def js(obj):
     """ Transform a python object so it can be safely used in javascript/JSON. """
-    return mark_safe(json.dumps(obj, cls=DjangoJSONEncoder))
+    return mark_safe(json.dumps(obj, cls=DjangoJSONEncoder, indent=2))
 
 
 @register.inclusion_tag('pwa.html', takes_context=True)

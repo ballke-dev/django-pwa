@@ -13,7 +13,5 @@
   "icons": {{ PWA_APP_ICONS|js }},
   "dir": {{ PWA_APP_DIR|js }},
   "lang": {{ PWA_APP_LANG|js }}
-  {%if PWA_OPTIONAL %},
-    {{ PWA_OPTIONAL|js }}
-  {% endif %}
+  {% for key, value in PWA_OPTIONAL.items %},{{ key|js }}: {{ value|js }}{% endfor %}
 }
